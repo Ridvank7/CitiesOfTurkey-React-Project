@@ -1,0 +1,68 @@
+@import "../../scss/variables";
+
+.navbar {
+    background-color: white;
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    a {
+        color: $cardTextColor;
+        text-decoration: none;
+        font-size: 2rem;
+        padding: 1rem;
+        &:hover {
+            background-color: $bacgroundColor;
+            color: $cardNavBgColor;
+        }
+        &:active {
+            transform: scale(95%);
+            transition: border-radius 0.1s ease-in-out;
+            box-shadow: 3px -1px 1px 0.5px rgba(1, 1, 1, 0.5);
+        }
+    }
+    .logo {
+        position: absolute;
+        left: 0;
+        top: 1px;
+        margin: 10px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        &:hover {
+            cursor: pointer;
+        }
+        &:active {
+            transform: scale(115%);
+        }
+    }
+    .login {
+        position: absolute;
+        right: 1rem;
+
+        display: flex;
+        flex-direction: column;
+        .loginlogo {
+            background-color: white;
+            margin: 10px;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            &:hover {
+                cursor: pointer;
+            }
+            &:active {
+                transform: scale(115%);
+                background-color: $cardNavBgColor;
+            }
+        }
+        a {
+            color: black;
+            background-color: white;
+            font-size: 1rem;
+            border-radius: 10% 50%;
+            &:active{
+                opacity: 50%;
+            }
+        }
+    }
+}
